@@ -38,30 +38,30 @@ def main():
     this_week_tasks = []
     notes = []
 
-    num_last_week = int(get_input("How many tasks to review from last week? "))
+    num_last_week = int(get_input("Enter the number of tasks to review from last week: "))
     for _ in range(num_last_week):
         task = {
-            'task': get_input("Task: "),
-            'description': get_input("Description: "),
-            'why': get_input("Why: "),
-            'planned': get_input("Planned Status: "),
-            'actual': get_input("Actual Status: ")
+            'task': get_input("Enter task: "),
+            'description': get_input("Enter description: "),
+            'why': get_input("Enter why: "),
+            'planned': get_input("Enter planned status: "),
+            'actual': get_input("Enter actual status: ")
         }
         last_week_tasks.append(task)
     
-    num_this_week = int(get_input("How many tasks planned for this week? "))
+    num_this_week = int(get_input("Enter the number of tasks planned for this week: "))
     for _ in range(num_this_week):
         task = {
-            'task': get_input("Task: "),
-            'description': get_input("Description: "),
-            'why': get_input("Why: "),
-            'planned': get_input("Planned Status: ")
+            'task': get_input("Enter task: "),
+            'description': get_input("Enter description: "),
+            'why': get_input("Enter why: "),
+            'planned': get_input("Enter planned status: ")
         }
         this_week_tasks.append(task)
 
-    num_notes = int(get_input("How many notes/comments? "))
+    num_notes = int(get_input("Enter the number of notes/comments: "))
     for _ in range(num_notes):
-        note = get_input("Note/Comment: ")
+        note = get_input("Enter note/comment: ")
         notes.append(note)
     
     # Create the markdown file
@@ -73,3 +73,12 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+import time
+
+def delayed_success_message():
+    time.sleep(5)
+    print("Weekly report created successfully.")
+    
+delayed_success_message()
+
